@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="./css/output.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>   
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+           document.documentElement.classList.add('dark')
+    } else { 
+           document.documentElement.classList.remove('dark')
+    }
+    </script>
+    <title>RESULT SUMMARY - TAILWIND</title>
+  </head>
+  <!-- !!BODY ------------------------------------>
+  <body class="bg-slate-100 flex justify-center items-center px-4 py-6  sm:pt-28 dark:bg-slate-900">
+    <!-- **MAIN SECTION*** ----------------------------------->
+    <div class="w-[full] mx-auto rounded-xl py-4 px-4 flex flex-wrap md:flex-nowrap md:w-full md:mx-auto md:justify-center items-center md:mt-18">
+      <!-- &&LEFT ---------------------------------------------->
+      <div class="bg-gradient-to-b from-violet-700 via-indigo-500 to-blue-800 h-[24rem] w-[18rem] mx-auto rounded-2xl px-6 py-8 text-center z-10 shadow-lg shadow-slate-300 dark:shadow-lg dark:shadow-slate-800 mb-4 md:mx-0 ">
+        <h1 class="font-semibold text-slate-100">Your Result</h1>
+        <!-- ^^ ROUNDED -->
+        <div class="w-[10rem] h-[10rem] bg-gradient-to-b from-indigo-700 to-transparent rounded-full mx-auto mt-10 flex flex-col
+        justify-center items-center space-y-2">
+            <h1 class="text-6xl text-slate-100 font-bold">76</h1>
+            <h5 class="text-slate-100">of 100</h5>
+        </div>
+        <!-- ^^ CONTENT -->
+        <h2 class="text-slate-100 mt-4 text-2xl font-semibold">Great</h2>
+        <p class="text-xs font-regular text-slate-100 text-center mt-4">You scored higher than the 65% of the people who have taken these tests.</p>
+      </div>
+
+      <!-- && RIGHT --------------------------------------------------------------------------->
+      <div class="h-[24rem] w-[18rem] mx-auto md:w-[19rem] rounded-xl md:rounded-tr-xl md:rounded-br-xl pr-4 pl-4 py-8 text-center bg-white flex flex-col items-start text-left shadow-lg shadow-slate-300 dark: shadow-lg dark:shadow-slate-800 mb-4 md:-translate-x-8 md:pl-14 md:mx-0  dark:bg-gray-800  lg:-translate-x-8 2xl:-translate-x-8 ">
+        <!-- ^^ HEADER -->
+        <div class="flex flex-row justify-centeritems-center space-x-32"> 
+        <h1 class="text-slate-800 text-left font-bold mb-6 leading-3 flex items-center dark:text-slate-100">Summary</h1>
+        <img class="w-6 h-6 flex items-center leading-3 mb-6 bg-gray-700 p-1 rounded-full dark:bg-gray-700 " src="./images/moon.svg" alt="" id="themeSwitch">
+      </div>
+        <!-- ^^ 4 BOXES ----------------------------------------------------------------------------->
+        <div class="w-full items-center space-y-3">
+        <!--!REACTION -->
+        <div class="flex flex-row justify-between items-center w-full bg-red-50 px-3 py-3 rounded-xl dark:bg-red-900 opacity-50">
+            <span class="flex flex-row items-center space-x-2">
+            <img class="w-4 h-4" src="./images/bolt.svg" alt="">
+            <h2 class="text-red-600 text-sm font-semibold leading-1 dark:text-red-300">Reaction</h2>  
+            </span>
+            <div class="leading-1"><h3 class="text-slate-400 text-sm leading-1"><b class="text-slate-800 dark:text-slate-100">80 </b>/ 100</h3></div>
+        </div>
+        <!-- ^^MEMORY -->
+        <div class="flex flex-row justify-between items-center w-full bg-yellow-50 px-3 py-3 rounded-xl dark:bg-yellow-900 opacity-50 ">
+            <span class="flex flex-row items-center space-x-2">
+            <img class="w-4 h-4" src="./images/brain.svg" alt="">
+            <h2 class="text-yellow-500 text-sm font-semibold leading-1 dark:text-yellow-300">Memory</h2>  
+            </span>
+            <div class="leading-1"><h3 class="text-slate-400 text-sm leading-1"><b class="text-slate-800 dark:text-slate-100">92 </b>/ 100</h3></div>
+        </div>
+    <!-- **VERBAL -->
+    <div class="flex flex-row justify-between items-center w-full bg-green-50 px-3 py-3 rounded-xl dark:bg-green-900 opacity-50 ">
+        <span class="flex flex-row items-center space-x-2">
+        <img class="w-4 h-4" src="./images/chat.svg" alt="">
+        <h2 class="text-green-500 text-sm font-semibold leading-1 dark:text-green-300">Verbal</h2>  
+        </span>
+        <div class="leading-1"><h3 class="text-slate-400 text-sm leading-1"><b class="text-slate-800 dark:text-slate-100">61 </b>/ 100</h3></div>
+    </div>
+    <!-- ?VISUAL -->
+    <div class="flex flex-row justify-between items-center w-full bg-blue-50 px-3 py-3 rounded-xl dark:bg-blue-900 opacity-50 ">
+        <span class="flex flex-row items-center space-x-2">
+        <img class="w-4 h-4 " src="./images/eye.svg" alt="">
+        <h2 class="text-blue-500 text-sm font-semibold leading-1 dark:text-blue-300">Visual</h2>  
+        </span>
+        <div class="leading-1"><h3 class="text-slate-400 text-sm leading-1"><b class="text-slate-800 dark:text-slate-100">72</b>/ 100</h3></div>
+    </div>
+</div>
+<!-- ?? CONTINUE ---------------------------------------------------------------------------------------------->
+<button class="bg-slate-700 text-slate-100 w-full rounded-3xl py-2 mt-9">Continue</button>
+  </div>
+    </div>
+</div>
+
+<!-- ** DARK MODE JAVASCRIPT -->
+<script>
+          let darkButton = document.getElementById('themeSwitch');
+        darkButton.addEventListener('click'  , () => {
+            if(document.documentElement.classList.contains('dark') ) {
+                localStorage.theme = 'light';
+                document.documentElement.classList.remove('dark');
+            } else {
+                localStorage.theme = 'dark';
+                document.documentElement.classList.add('dark');
+            }
+
+            location.reload();
+        })
+</script>
+
+  </body>
+</html>
